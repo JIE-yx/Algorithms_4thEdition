@@ -1,4 +1,4 @@
-package chapter2.exercise;
+package chapter1.section4;
 
 /**
  * 最遥远的一对（一维）。编写一个程序，给定一个含有 N 个 double 值的数组 a[]，在其中找到

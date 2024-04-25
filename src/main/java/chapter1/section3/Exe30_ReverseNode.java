@@ -1,6 +1,4 @@
-package chapter1.exercise;
-
-import chapter1.Node;
+package chapter1.section3;
 
 /**
  * 反转链表

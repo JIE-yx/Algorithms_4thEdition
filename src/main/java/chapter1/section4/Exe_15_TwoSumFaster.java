@@ -1,4 +1,4 @@
-package chapter2.exercise;
+package chapter1.section4;
 
 /**
  * 快速 3-sum。作为热身，使用一个线性级别的算法（而非基于二分查找的线性对数级别的算法）

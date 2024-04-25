@@ -1,4 +1,4 @@
-package chapter1;
+package chapter1.section3;
 
 public class DoubleNode <Item> {
     public Item item;

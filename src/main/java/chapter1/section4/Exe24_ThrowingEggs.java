@@ -1,4 +1,4 @@
-package chapter2.exercise;
+package chapter1.section4;
 
 /**
  * 扔鸡蛋。假设你面前有一栋 N 层的大楼和许多鸡蛋，假设将鸡蛋从 F 层或者更高的地方扔下鸡

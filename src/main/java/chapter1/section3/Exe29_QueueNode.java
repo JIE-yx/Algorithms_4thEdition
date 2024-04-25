@@ -1,6 +1,4 @@
-package chapter1.exercise;
-
-import chapter1.Node;
+package chapter1.section3;
 
 /**
  * 用环形链表实现一个queue，环形链表中没有空元素

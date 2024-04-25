@@ -1,6 +1,4 @@
-package chapter1;
-
-import edu.princeton.cs.algs4.In;
+package chapter1.section3;
 
 import java.util.Iterator;
 

@@ -1,6 +1,4 @@
-package chapter1.exercise;
-
-import chapter1.NodeStack;
+package chapter1.section3;
 
 import java.util.HashMap;
 import java.util.Map;

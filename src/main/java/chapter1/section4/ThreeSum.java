@@ -1,6 +1,4 @@
-package chapter2;
-
-import edu.princeton.cs.algs4.BinarySearch;
+package chapter1.section4;
 
 import java.util.Arrays;
 

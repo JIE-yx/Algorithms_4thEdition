@@ -1,4 +1,4 @@
-package chapter2.exercise;
+package chapter1.section4;
 
 /**
  * 矩阵的局部最小元素。给定一个含有 N2 个不同整数的 N×N 数组 a[]。设计一个运行时间和 N

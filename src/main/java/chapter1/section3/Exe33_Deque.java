@@ -1,6 +1,4 @@
-package chapter1.exercise;
-
-import chapter1.DoubleNode;
+package chapter1.section3;
 
 import java.util.Iterator;
 

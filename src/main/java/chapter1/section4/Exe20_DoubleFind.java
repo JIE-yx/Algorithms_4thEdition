@@ -1,4 +1,4 @@
-package chapter2.exercise;
+package chapter1.section4;
 
 /**
  * 双调查找。如果一个数组中的所有元素是先递增后递减的，则称这个数组为双调的。编写一个

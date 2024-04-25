@@ -1,4 +1,4 @@
-package chapter1;
+package chapter1.section3;
 
 /**
  * 相比于数组，链表插入、删除元素更方便

@@ -1,4 +1,4 @@
-package chapter2.exercise;
+package chapter1.section4;
 
 /**
  * 编写一个程序，有序打印给定的两个有序数组（含有 N 个 int 值）中的所有公共元素

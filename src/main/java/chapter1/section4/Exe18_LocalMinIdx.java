@@ -1,4 +1,4 @@
-package chapter2.exercise;
+package chapter1.section4;
 
 /**
  * 数组的局部最小元素。编写一个程序，给定一个含有 N 个不同整数的数组，找到一个局部最
