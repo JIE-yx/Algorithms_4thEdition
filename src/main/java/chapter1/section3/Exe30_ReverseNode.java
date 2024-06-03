@@ -27,8 +27,8 @@ public class Exe30_ReverseNode {
 
     /**
      * 迭代版本，维护2个变量
-     * reverse指向已经被反转的链表部分的首个节点
-     * first指向未被反转的链表部分的首个节点
+     * reversedHead指向已经被反转的链表部分的首个节点
+     * notReversedHead指向未被反转的链表部分的首个节点
      * @param node
      * @return
      */

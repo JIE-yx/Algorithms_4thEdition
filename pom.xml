@@ -18,5 +18,14 @@
             <artifactId>gson</artifactId>
             <version>2.8.9</version> <!-- 使用最新的可用版本 -->
         </dependency>
+
+        <!-- JUnit 4 依赖项 -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 </project>

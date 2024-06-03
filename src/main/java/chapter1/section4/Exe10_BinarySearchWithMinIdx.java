@@ -47,7 +47,4 @@ public class Exe10_BinarySearchWithMinIdx {
             System.out.println(binarySearch(nums, i));
         }
     }
-
-
-
 }

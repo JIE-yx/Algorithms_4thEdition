@@ -30,9 +30,7 @@ public class Exe18_LocalMinIdx {
             return 0;
         }
         if (len == 2) {
-            if (numbers[0] == numbers[1]) {
-                return NOT_FOUND;
-            } else if (numbers[0] > numbers[1]) {
+            if (numbers[0] > numbers[1]) {
                 return 1;
             } else {
                 return 0;
@@ -64,6 +62,7 @@ public class Exe18_LocalMinIdx {
                 if (num2 < num1 && num2 < num3) {
                     return midIdx;
                 } else if (num1 < num3) {
+                    // 因为midIdx处的数字不是局部最小值，因此rightIdx = midIdx - 1
                     rightIdx = midIdx - 1;
                 } else {
                     leftIdx = midIdx + 1;

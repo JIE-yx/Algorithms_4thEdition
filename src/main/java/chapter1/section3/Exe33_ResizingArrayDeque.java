@@ -63,7 +63,6 @@ public class Exe33_ResizingArrayDeque<Item> implements Iterable <Item>{
      * @param targetSize
      */
     private void resize(int targetSize) {
-        // todo 完整逻辑
         Item[] array1 = (Item[]) new Object[targetSize];
         // 从原数组的第start个元素开始复制
         int start = first + 1;
@@ -158,7 +157,7 @@ public class Exe33_ResizingArrayDeque<Item> implements Iterable <Item>{
     public static void main(String[] args) {
         Exe33_ResizingArrayDeque exe33_resizingArrayDeque = new Exe33_ResizingArrayDeque();
         Random random = new Random(System.currentTimeMillis());
-        for (int i = 0; i < 10; i ++) {
+        for (int i = 0; i < 30; i ++) {
             int randNum = random.nextInt(1000);
             if (randNum <= 400) {
                 System.out.println("push left " + i);

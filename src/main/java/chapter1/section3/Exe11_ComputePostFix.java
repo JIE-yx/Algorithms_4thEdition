@@ -43,6 +43,8 @@ public class Exe11_ComputePostFix {
     public double computeInExp(String inExp) {
         Exe10_InFixToPostFix exe10 = new Exe10_InFixToPostFix();
         String postExp = exe10.infixToPostfix(inExp);
+        System.out.println("inExp = " + inExp);
+        System.out.println("postExp = " + postExp);
         return computePostExp(postExp);
     }
 

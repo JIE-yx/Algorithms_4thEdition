@@ -1,0 +1,13 @@
+迭代器。能否实现一个非递归版本的 keys() 方法，其使用的额外空间和树的高度成正比（和查找范围内[lo, hi]的键的多少无关）？
+
+可以的，详见BinarySearchTree的exe26_noRecursiveKeys方法，核心思想
+1.利用栈
+2.在二叉树中，对于某一个节点node，如果node存在右子树，那么
+   树中下一个比node大的节点一定是node的右子树的最小节点，即min(node.right)
+   所以每次从栈顶弹出一个节点node后，就要再从node的右子树node.right开始，不断遍历right的左子节点，这些左子节点都比node大
+
+步骤如下
+1.把root压入栈，不断遍历root的左子节点left,只要left >= lo，就把left压入栈
+2.弹出栈顶元素top
+  2.1 如果 top 属于[lo, hi]，那么把top加入结果列表
+  2.2 如果 top 存在右子节点right,且 right <= hi，则把right压入栈，并不断遍历right的左节点left，只要left >= lo，就加入栈
