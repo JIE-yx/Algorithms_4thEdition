@@ -2,7 +2,6 @@ package chapter2.section1;
 
 import chapter1.section3.Node;
 import chapter2.section3.Exe15_NutAndBolt;
-import edu.princeton.cs.algs4.In;
 
 import java.util.Random;
 

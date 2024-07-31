@@ -1,5 +1,4 @@
 package chapter1.section3;
-import edu.princeton.cs.algs4.In;
 
 import java.util.*;
 import java.util.concurrent.LinkedBlockingQueue;
