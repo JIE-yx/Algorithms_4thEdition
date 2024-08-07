@@ -1,5 +1,6 @@
 package chapter4.section3;
 
+import chapter2.section4.Exe33_34_IndexMinPq;
 import chapter2.section4.PQ;
 
 import java.util.ArrayList;

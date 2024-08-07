@@ -26,7 +26,7 @@ public class Exe33_34_IndexMinPq <T extends Comparable<T>>{
     private T[] items;
 
     /**
-     * 堆结构，堆items中的元素按照索引进行堆排序
+     * 堆结构，对items中的元素按照索引进行堆排序
      * 例如 pq[0]表示items中最小的元素的索引
      */
     private int[] pq;
@@ -217,7 +217,7 @@ public class Exe33_34_IndexMinPq <T extends Comparable<T>>{
      * @param idx
      * @return
      */
-    private boolean contains(int idx) {
+    public boolean contains(int idx) {
         return qp[idx] != -1;
     }
 
