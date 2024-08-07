@@ -70,7 +70,7 @@ public class MSD1 {
          * 字符串排序
          * 排序结果为aux的前[0, high-left]部分
          */
-        for (int i = left; i <= high; i ++) {
+        for (int i = left; i <= high; i++) {
             String s = strings[i];
             int c = charAt(s, d) + 1;
             int idx = count[c];

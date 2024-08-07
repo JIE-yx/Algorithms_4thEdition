@@ -73,6 +73,7 @@ public class LSD {
     private static void sort(String[] strings, String[] aux, int idx) {
         int len = strings.length;
         // count[i]最终表示strings中第i个字符的位置
+        // 第0位为预留位，便于将频率转换成索引
         int[] count = new int[R + 1];
         // 先对字符串的第idx位进行频率统计
         // 这里先暂时用count[i + 1]统计字符 i出现的频率
@@ -107,8 +108,12 @@ public class LSD {
         int strLen = 3;
         int strNum = 10;
         String[] strings = StrUtil.genEqualLenStrings(strNum, strLen);
+        String[] stringsCopty = StrUtil.copy(strings);
         StrUtil.printStrings(strings);
         sort(strings, strLen - 1);
+        StrUtil.printStrings(strings);
+        Exe7_LSDByQueue.sort(stringsCopty, strLen - 1);
+        StrUtil.printStrings(stringsCopty);
     }
 
 }

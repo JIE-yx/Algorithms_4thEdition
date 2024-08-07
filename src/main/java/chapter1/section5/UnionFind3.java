@@ -40,7 +40,7 @@ public class UnionFind3 implements UnionFind{
     }
 
 
-    private boolean connected(int p, int q) {
+    public boolean connected(int p, int q) {
         return find(p) == find(q);
     }
 

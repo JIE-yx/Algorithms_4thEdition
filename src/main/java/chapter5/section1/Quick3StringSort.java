@@ -84,6 +84,8 @@ public class Quick3StringSort {
         int strNum = 10;
         int maxLen = 3;
         String[] strings = StrUtil.genStrings(strNum, maxLen);
+        strings = new String[] {"now", "is", "the" , "time",  "for" , "all",  "good",
+        "people", "to", "come", "to" , "the" , "aid", "of"};
         String[] stringsCopy = StrUtil.copy(strings);
         StrUtil.printStrings(strings);
         MSD1.sort(strings);

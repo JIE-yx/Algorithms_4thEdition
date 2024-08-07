@@ -7,6 +7,22 @@ import java.util.Iterator;
  */
 public class Exe33_Deque <Item> implements Iterable<Item> {
 
+    public DoubleNode<Item> getHead() {
+        return head;
+    }
+
+    public void setHead(DoubleNode<Item> head) {
+        this.head = head;
+    }
+
+    public DoubleNode<Item> getEnd() {
+        return end;
+    }
+
+    public void setEnd(DoubleNode<Item> end) {
+        this.end = end;
+    }
+
     /**
      * 指向队列头部，假设右边为队列头部
      * head.next指向头部的第二个元素
@@ -100,7 +116,6 @@ public class Exe33_Deque <Item> implements Iterable<Item> {
         num = num - 1;
         return item;
     }
-
 
     @Override
     public Iterator<Item> iterator() {
