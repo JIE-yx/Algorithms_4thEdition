@@ -47,4 +47,8 @@ public class DirectGraph {
         }
         return reverseG;
     }
+
+    public int outDegree(int i) {
+        return adj[i].size();
+    }
 }
