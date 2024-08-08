@@ -77,6 +77,11 @@ public class DirectGraphOrder {
             }
         }
         postOrder.add(v);
+        /**
+         * 对于点v来说，v的所有adj都已经遍历完了，且adj都已经加入到reversePostOrder中了
+         * 此时在把v加入到reversePostOrder的头部，就保证了v一定在排在其adj的前面
+         * 对于任意一个v，在reversePostOrder中，均有v在adj的前面，这也就保证了拓扑排序
+         */
         reversePostOrder.add(0, v);
     }
 
