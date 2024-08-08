@@ -7,7 +7,9 @@ import java.util.SortedMap;
 import java.util.Stack;
 
 /**
- * Dijkstra能够解决非负权重的加权有向图的单起点最短路径问题
+ * Dijkstra能够解决 【非负权重】 的加权有向图的单起点最短路径问题
+ * 为什么要强调【非负】权重呢？如果权重【为负】，且存图中【有环】，
+ * 那么算法可能会不断在这个环里面绕圈圈
  */
 public class Dijkstra {
 
@@ -106,7 +108,4 @@ public class Dijkstra {
         }
         return result;
     }
-
-
-
 }

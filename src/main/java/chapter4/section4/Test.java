@@ -4,7 +4,7 @@ public class Test {
 
 
     public static void main(String[] args) {
-        test1();
+        test2();
     }
 
     public static void test0() {
@@ -55,5 +55,52 @@ public class Test {
             s += (",edgeTo " + dijkstra.shortestPathToString(i));
             System.out.println(s);
         }
+    }
+
+    private static void test2() {
+        EdgeWeightedDigraph edgeWeightedDigraph = getEWDG();
+        int start = 0;
+        int pointNum = edgeWeightedDigraph.getPointNum();
+        Dijkstra dijkstra = new Dijkstra(edgeWeightedDigraph,start);
+        AcyclicSP acyclicSP = new AcyclicSP(edgeWeightedDigraph, start);
+        System.out.println("===== dijkstra =====");
+        for (int i = 1; i < pointNum; i ++) {
+            String s = i + ":";
+            s += (" hashPathTo " + dijkstra.hasPathTo(i));
+            s += (",disTo " + dijkstra.distTo(i));
+            s += (",edgeTo " + dijkstra.shortestPathToString(i));
+            System.out.println(s);
+        }
+        System.out.println("===== acyclicSP =====");
+        for (int i = 1; i < pointNum; i ++) {
+            String s = i + ":";
+            s += (" hashPathTo " + acyclicSP.hasPathTo(i));
+            s += (",disTo " + acyclicSP.distTo(i));
+            s += (",edgeTo " + acyclicSP.shortestPathToString(i));
+            System.out.println(s);
+        }
+    }
+
+    private static EdgeWeightedDigraph getEWDG() {
+        int pointNum = 6;
+        EdgeWeightedDigraph ewdGraph = new EdgeWeightedDigraph(pointNum);
+        DirectedWeightedEdge e01 = new DirectedWeightedEdge(0, 1 , 100);
+        ewdGraph.add(e01);
+
+        DirectedWeightedEdge e03 = new DirectedWeightedEdge(0, 3 , 6);
+        ewdGraph.add(e03);
+
+        DirectedWeightedEdge e04 = new DirectedWeightedEdge(0, 4 , 3);
+        ewdGraph.add(e04);
+
+        DirectedWeightedEdge e12 = new DirectedWeightedEdge(1, 2 , 1);
+        ewdGraph.add(e12);
+
+        DirectedWeightedEdge e31 = new DirectedWeightedEdge(3, 1 , 6);
+        ewdGraph.add(e31);
+
+        DirectedWeightedEdge e43 = new DirectedWeightedEdge(4, 3 , 2);
+        ewdGraph.add(e43);
+        return ewdGraph;
     }
 }
