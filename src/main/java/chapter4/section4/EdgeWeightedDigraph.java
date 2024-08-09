@@ -35,6 +35,14 @@ public class EdgeWeightedDigraph {
         return edgeNum;
     }
 
+    public void reverseWeight() {
+        for (int i = 0; i < pointNum; i ++) {
+            for (DirectedWeightedEdge edge : adj[i]) {
+                edge.setWeight(edge.weight() * -1);
+            }
+        }
+    }
+
     public void print() {
         System.out.println("printing edge weighted digraph...");
         for (int from = 0; from < pointNum; from++) {

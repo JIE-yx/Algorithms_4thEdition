@@ -38,6 +38,7 @@ public class DirectGraph {
     public int getPointNum() {
         return pointNum;
     }
+
     public DirectGraph reverse() {
         DirectGraph reverseG = new DirectGraph(pointNum);
         for (int point = 0; point < pointNum; point++) {
@@ -50,5 +51,19 @@ public class DirectGraph {
 
     public int outDegree(int i) {
         return adj[i].size();
+    }
+
+    @Override
+    public String toString() {
+        String result = "";
+        for (int i = 0 ; i < pointNum; i ++) {
+            String s = i + ":";
+            for (int j : adj[i]) {
+                s += (j + ",");
+            }
+            result += s;
+            result += "\n";
+        }
+        return result;
     }
 }

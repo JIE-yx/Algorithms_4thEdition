@@ -4,7 +4,7 @@ public class Test {
 
 
     public static void main(String[] args) {
-        test2();
+        test3();
     }
 
     public static void test0() {
@@ -77,6 +77,21 @@ public class Test {
             s += (" hashPathTo " + acyclicSP.hasPathTo(i));
             s += (",disTo " + acyclicSP.distTo(i));
             s += (",edgeTo " + acyclicSP.shortestPathToString(i));
+            System.out.println(s);
+        }
+    }
+
+    private static void test3() {
+        EdgeWeightedDigraph edgeWeightedDigraph = getEWDG();
+        int start = 0;
+        int pointNum = edgeWeightedDigraph.getPointNum();
+        AcyclicLP acyclicLP = new AcyclicLP(edgeWeightedDigraph, start);
+        System.out.println("===== acyclicLP =====");
+        for (int i = 1; i < pointNum; i ++) {
+            String s = i + ":";
+            s += (" hashPathTo " + acyclicLP.hasPathTo(i));
+            s += (",disTo " + acyclicLP.distTo(i));
+            s += (",edgeTo " + acyclicLP.longestPathToString(i));
             System.out.println(s);
         }
     }

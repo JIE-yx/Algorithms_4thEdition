@@ -12,6 +12,10 @@ public class DirectedWeightedEdge {
     private int w;
 
 
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
     /**
      * 权重
      */
@@ -46,5 +50,9 @@ public class DirectedWeightedEdge {
     @Override
     public String toString() {
         return v + "-" + w + "(" + weight + ")";
+    }
+
+    public String toString1() {
+        return v + "-" + w + "(" + (-1.0 * weight) + ")";
     }
 }
