@@ -61,7 +61,7 @@ public class Quick3StringSort {
         if (charAt(strings[lt], d) > -1) {
             sort(strings, lt, gt, d + 1);
         }
-        // 对于小值部分，不确定各字符串d位的具体值，需要基于d位继续三向排序
+        // 对于大值部分，不确定各字符串d位的具体值，需要基于d位继续三向排序
         sort(strings, gt + 1, high, d);
 
     }
