@@ -47,8 +47,10 @@ public class Exe15_NutAndBolt {
         }
         Item pivotBolt = bolts[low];
         Item pivotNut = partition(nuts, pivotBolt, low, high);
+        // 此时可以保证pivotIdx左边的nut都是更小的，右边的nut都是更大的
         int pivotIdx = pivotNut.idx;
         pivotBolt = partition(bolts, pivotNut, low, high);
+        // 此时可以保证pivotIdx左边的bolt都是更小的，右边的bolt都是更大的
         result[pivotIdx][0] = pivotBolt;
         result[pivotIdx][1] = pivotNut;
         match(bolts, nuts, result, low, pivotIdx - 1);

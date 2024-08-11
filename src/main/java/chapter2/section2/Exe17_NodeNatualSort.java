@@ -38,7 +38,10 @@ public class Exe17_NodeNatualSort {
                 Node<Comparable>[] mergedNodes = merge(current, firstSubSortedTail, firstSubSortedTail.next, secondSubSortedTail);
                 pre.next = mergedNodes[0];
                 mergedNodes[1].next = nextSegment;
-                // 第一次合并后要更新head节点，便于下一次迭代合并
+                /**
+                 * 每轮迭代的第一次合并都需要更新head
+                 * 因为该方法最终返回的也是head
+                 */
                 if (!setHead) {
                     head = pre.next;
                     dummy = pre;

@@ -74,7 +74,7 @@ public class Exe20_indirectMergeSort {
     }
 
     public static void main(String[] args) {
-        Comparable[] comparables = SortUtil.genNumbers(2);
+        Comparable[] comparables = SortUtil.genNumbers(5);
         SortUtil.print(comparables);
         SortUtil.print(sort(comparables));
     }

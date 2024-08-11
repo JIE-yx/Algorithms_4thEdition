@@ -33,9 +33,11 @@ public class QuickSort3Way implements Sort {
         while (i <= gt) {
             Comparable c = a[i];
             int cmp = p.compareTo(c);
-            // p比当前的元素更小，当前的元素大于p，所以当前的元素要交换到gt处，同时gt - 1
-            // 随着gt不断减少，gt右边的元素都是大于p的
-            // 同时i不变，因为交换后a[i]的大小不确定，需要在下次迭代继续判断
+            /**
+             * 因为是从左到右迭代的，此时右半部分的元素的大小是不确定的
+             * 可能a[gt]的元素很小，因此把a[gt]交换到a[i]后，不能直接i++
+             * 需要再观察一轮a[i]
+             */
             if (cmp < 0) {
                 exch(a, i, gt);
                 gt = gt - 1;
@@ -46,7 +48,7 @@ public class QuickSort3Way implements Sort {
                 lt = lt + 1;
                 // 这里其实可以再执行一下i++，不过理解起来更复杂一些。
                 // i之前的元素都能保证已经被正确处理，而lt是小于等于i的
-                // i = i + 1;
+                i = i + 1;
             } else {
                 // 如果当前元素等于p，那么直接判断下一个元素
                 i = i + 1;
@@ -71,7 +73,7 @@ public class QuickSort3Way implements Sort {
             }
         }
 
-        Comparable[] a = new Comparable[]{4,3,2,1,5};
+        Comparable[] a = new Comparable[]{4,3,2,2,2,2,2,1,1,1,3,3,3,34,4,4,1,5};
         quickSort3Way.sort(a);
         SortUtil.print(a);
     }
