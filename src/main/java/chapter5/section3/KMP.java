@@ -71,6 +71,9 @@ public class KMP {
             int c = txt.charAt(i);
             j = dfa[c][j];
             i++;
+            if (j == patternLen) {
+                return i - patternLen;
+            }
         }
         if (j == patternLen) {
             return i - patternLen;

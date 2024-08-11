@@ -54,7 +54,7 @@ public class Exe12_DisOfTreeNode {
         // 通过parentMap查询最近公共祖
         TreeNode lowestCommonAncestor = findLCA(w, v, parentMap);
         // 计算距离
-        return disMap.get(w) + disMap.get(v) - disMap.get(lowestCommonAncestor);
+        return disMap.get(w) + disMap.get(v) - 2 * disMap.get(lowestCommonAncestor);
 
     }
 

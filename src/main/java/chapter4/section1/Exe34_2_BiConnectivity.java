@@ -19,14 +19,16 @@ public class Exe34_2_BiConnectivity {
 
     /**
      * 遍历过程中，节点i在dfs树的深度
+     * dfsDepth只会在初始化的时候赋值一次
      */
     public int[] dfsDepth;
 
     /**
      * low[i]为 i及i的所有子孙节点，能够达到的邻居节点的最小深度.其更新时机如下
      * 0. 这里的邻接节点可以包含节点自身，这样子在执行dfs(i)时，可以让dfsLow[i]和dfsDepth[i] 初始值相同
-     * 1. 遇到环时。即point的邻接子节点adj(即adj不是node的直接父节点parent[point])已经被访问
+     * 1. 遇到环时。即point的邻接子节点adj(即adj不是point的直接父节点parent[point])已经被访问
      *            那么说明存在另一条已经被访问过的通路，可能可以更快的到达point，所以更新low[point] = min(low[point], depth(adj))
+     *            这里的depth(adj)只会在初始化的时候赋值一次，此时adj可能还没有完全遍历完，其low[adj]值还不是最新的，这里用depth[adj]更新
      *
      * 2. 遍历完某个dfs(point.adj)时，point的某个邻接子节点已经被dfs遍历完，那么low[adj]可能会更新
      *            因此需要回溯更新low[point] = min(low[point], low[adj])

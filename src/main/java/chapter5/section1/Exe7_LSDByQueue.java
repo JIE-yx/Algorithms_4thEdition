@@ -32,7 +32,6 @@ public class Exe7_LSDByQueue {
                     idx++;
                 }
             }
-            Thread t = new Thread();
         }
     }
 }

@@ -69,7 +69,7 @@ public class Exe29_MaxMinPQ <T extends Comparable<T>> {
             return null;
         }
         // 此时num至少为1
-        if (num == maxPq.length / 4) {
+        if (num > 0 && num == maxPq.length / 4) {
             resize(maxPq.length / 2);
         }
         MaxMinPQNode<T> maxNode = maxPq[0];

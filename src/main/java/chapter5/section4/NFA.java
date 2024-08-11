@@ -72,6 +72,7 @@ public class NFA {
             if (currentChar == '(' || currentChar == ')' || currentChar == '*') {
                 /**
                  * *、（、）都是可以直接【空字符转换】到下一个状态的
+                 * |不能直接进入下一个状态！，因为只能从左边走到|，此时必须放弃|右半部分
                  */
                 G.addEdge(i, i + 1);
             }
