@@ -49,12 +49,17 @@ public class Exe37_Josephus {
         int currentPeopleNum = numberOfPeople;
         int currentPeopleIdx = 0;
         while (currentPeopleNum > 1) {
+//            System.out.println("剩余人数 " + currentPeopleNum);
             int numberCount = deadNumber;
             // 从位置的人开始报数
+//            System.out.println("从 idx " + currentPeopleIdx + " 开始 报数");
             while (numberCount > 1) {
                 if (alive[currentPeopleIdx]) {
                     // 如果当前位置的人活着，那么继续报下一个数
                     numberCount = numberCount - 1;
+//                    System.out.println("idx " + currentPeopleIdx + "仍存活， 剩余报数 " + numberCount);
+                } else {
+//                    System.out.println("idx " + currentPeopleIdx + "已死亡， 剩余报数 " + numberCount);
                 }
                 // 绕着圈圈一直报数
                 currentPeopleIdx = currentPeopleIdx + 1;
@@ -62,9 +67,18 @@ public class Exe37_Josephus {
                     currentPeopleIdx = 0;
                 }
             }
-            // 当前位置的人是幸运儿，要死去
-            System.out.print(currentPeopleIdx + " ");
+            /**
+             * 下一个存活位置的人遭重了
+             */
+            while (!alive[currentPeopleIdx]) {
+                currentPeopleIdx = currentPeopleIdx + 1;
+                if (currentPeopleIdx == numberOfPeople) {
+                    currentPeopleIdx = 0;
+                }
+            }
             alive[currentPeopleIdx] = false;
+//            System.out.println("一轮报数结束，idx " + currentPeopleIdx  + "死亡");
+            System.out.print(currentPeopleIdx + " ");
             // 更新存活人数
             currentPeopleNum = currentPeopleNum - 1;
         }
@@ -79,6 +93,6 @@ public class Exe37_Josephus {
 
     public static void main(String[] args) {
         alive(9, 6);
-        alive(9, 6);
+        alive2(9, 6);
     }
 }

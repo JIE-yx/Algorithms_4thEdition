@@ -88,7 +88,7 @@ public class Exe33_ResizingArrayDeque<Item> implements Iterable <Item>{
             return null;
         }
         // 元素数量过少，提高利用率
-        if (num == array.length / 4) {
+        if (num > 0 && num == array.length / 4) {
             resize(array.length / 2);
         }
         int idx = first + 1;
@@ -105,7 +105,7 @@ public class Exe33_ResizingArrayDeque<Item> implements Iterable <Item>{
             return null;
         }
         // 元素数量过少，提高利用率
-        if (num == array.length / 4) {
+        if (num > 0 && num == array.length / 4) {
             resize(array.length / 2);
         }
         int idx = first + num;
