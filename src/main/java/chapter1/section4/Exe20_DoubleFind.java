@@ -16,6 +16,9 @@ public class Exe20_DoubleFind {
      * @return
      */
     public static int find(int[] numbers, int target, int left, int right) {
+        if (numbers == null || numbers.length == 0) {
+            return NOT_FOUND;
+        }
         if (left > right) {
             return NOT_FOUND;
         }
@@ -25,9 +28,6 @@ public class Exe20_DoubleFind {
             } else {
                 return NOT_FOUND;
             }
-        }
-        if (numbers == null || numbers.length == 0) {
-            return NOT_FOUND;
         }
         int mid = left + (right - left) / 2;
         int midNum = numbers[mid];
