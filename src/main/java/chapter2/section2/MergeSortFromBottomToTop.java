@@ -60,7 +60,8 @@ public class MergeSortFromBottomToTop implements Sort {
             } else if (j > high) {
                 a[k] = copy[i];
                 i = i + 1;
-            } else if (less(copy[i], copy[j])) {
+            } else if (copy[i].compareTo(copy[j]) <= 0) {
+                // 注意，为了排序的稳定性，二者相等时，优先使用左侧的数字
                 a[k] = copy[i];
                 i = i + 1;
             } else {
