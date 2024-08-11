@@ -7,37 +7,34 @@ public class Exe30_ReverseNode {
 
 
     /**
-     * 递归反转链表
-     * @param node
+     * 递归反转链表，返回反转后的新head
+     * @param head
      * @return
      */
-    public static Node<Integer> reverse(Node<Integer> node) {
-        if (node == null) {
-            return null;
+    public static Node<Integer> reverse(Node<Integer> head) {
+        if (head == null || head.next == null) {
+            return head;
         }
-        if (node.next == null) {
-            return node;
-        }
-        Node<Integer> nextOfNode = node.next;
-        node.next = null;
-        Node<Integer> reversedNextOfNode = reverse(nextOfNode);
-        reversedNextOfNode.next = node;
-        return node;
+        Node<Integer> next = head.next;
+        Node<Integer> newHead = reverse(head.next);
+        next.next = head;
+        head.next = null;
+        return newHead;
     }
 
     /**
      * 迭代版本，维护2个变量
      * reversedHead指向已经被反转的链表部分的首个节点
      * notReversedHead指向未被反转的链表部分的首个节点
-     * @param node
+     * @param head
      * @return
      */
-    public static Node<Integer> reverse2(Node<Integer> node) {
-        if (node == null || node.next == null) {
-            return node;
+    public static Node<Integer> reverse2(Node<Integer> head) {
+        if (head == null || head.next == null) {
+            return head;
         }
         Node<Integer> reversedHead = null;
-        Node<Integer> notReversedHead = node;
+        Node<Integer> notReversedHead = head;
         while (notReversedHead != null) {
             Node<Integer> next = notReversedHead.next;
             notReversedHead.next = reversedHead;
@@ -52,7 +49,7 @@ public class Exe30_ReverseNode {
             System.out.print(" " + node.item);
             node = node.next;
         }
-        System.out.println("print done");
+        System.out.println(",print done");
     }
 
     public static void main(String[] args) {
@@ -62,7 +59,7 @@ public class Exe30_ReverseNode {
         node.next.next.next = new Node<>(7);
         node.next.next.next.next = new Node<>(4);
         print(node);
-        node = reverse2(node);
+        node = reverse(node);
         print(node);
     }
 }
