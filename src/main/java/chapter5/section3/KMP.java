@@ -1,6 +1,8 @@
 package chapter5.section3;
 
 
+import java.util.*;
+
 /**
  * dfa为一个有限确定状态机，把文本字符串txt的字符挨个输入dfa
  * 如果能达到dfa的最终状态M，就说明输入是满足pattern要求的
